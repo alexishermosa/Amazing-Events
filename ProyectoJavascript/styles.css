@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#logo-img {
+  width: 150px;
+}
+header {
+  min-height: 16vh;
+}
+.header-details {
+  height: 8vh;
+}
+.header-carrusel {
+  height: 8vh;
+  background-color: rgb(238, 238, 238);
+}
+.bi-caret-right, .bi-caret-left{
+  font-size: 32px;
+}
+
+nav {
+  min-height: 8vh;
+  background-color: rgb(6, 9, 48);
+}
+
+main {
+  min-height: 69vh;
+  background-color: rgb(238, 238, 238);
+}
+.main-details {
+  min-height: 77vh;
+}
+
+.list-group-item {
+  border: none;
+  background-color: rgb(238, 238, 238);
+}
+.h-card{
+  min-height: 32rem;
+}
+.card-border {
+  border: solid 10px white;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all ease-out 0.2s;
+}
+.card-border:hover {
+  transform: scale(1.05);
+}
+.card-border-detail {
+  border: solid 10px white;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all ease-out 0.2s;
+}
+/* .card-h{
+  min-height: ; */
+
+.img-h{
+  min-height: 15rem;
+  object-fit: cover;
+}
+.buttons {
+  /* min-width: 700px; */
+  display: flex;
+
+}
+.button-disable{
+  pointer-events: none;
+  background-color: #198754;
+  color: #fff;
+}
+.buttons a {
+  margin-right: 2rem;
+  text-decoration: none;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: #314652;
+  color: #f1f1f1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
+}
+.buttons a:hover {
+  transform: scale(1.2);
+}
+footer {
+  height: 15vh;
+  background-color: rgb(207, 255, 220);
+}
+.form-container,
+.detail-container {
+  height: 69vh;
+}
+.text-area {
+  height: 30vh;
+  resize: none;
+}
