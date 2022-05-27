@@ -1,21 +1,24 @@
-const dataArray = data.eventos;
+let dataArray;
 const contenedorCard = document.getElementById("tarjetas");
 
+async function getDataFromApi() {
+  await fetch("https://amazing-events.herokuapp.com/api/events")
+    .then(respuesta => respuesta.json())
+    .then(json => dataApi = json)
+  console.log(dataApi)
+  let dataArray = dataApi.events;
 
-function getData() {
-  let idEvento = 1
-  dataArray.map(evento => evento.id = idEvento++)
-  console.log(dataArray)
-  let id = location.search.split("?id=").filter(Number)
-  // console.log(location)
-  // console.log(location.search)
-  // console.log(id)
-  let selectedId = Number(id[0])
-  console.log(selectedId)
-  let evento = dataArray.find(evento => evento.id == selectedId)
-  // console.log(evento)
+  function getData() {
 
-  contenedorCard.innerHTML = `<div class="col d-flex justify-content-md-center">
+    console.log(dataArray)
+    let id = location.search.split("?id=")[1]
+    // console.log(location)
+    // console.log(location.search)
+    // console.log(id)
+    let evento = dataArray.find(evento => evento._id == id)
+    // console.log(evento)
+
+    contenedorCard.innerHTML = `<div class="col d-flex justify-content-md-center">
          <div class="card card-border-detail h-100 justify-content-center">
           <div class="row g-0">
             <div class="col-12 col-md-5">
@@ -42,6 +45,8 @@ function getData() {
           </div>
         </div>
 </div>`
-}
+  }
 
-getData()
+  getData()
+}
+getDataFromApi()
